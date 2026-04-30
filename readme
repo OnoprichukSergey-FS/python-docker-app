@@ -1,1 +1,112 @@
-s
+# 🐳 Python Docker API
+
+A simple Flask-based REST API containerized using Docker and ready for deployment.
+
+This project demonstrates how to build, package, and run a Python backend inside a Docker container — a real-world backend skill used in production environments.
+
+---
+
+## 🚀 Features
+
+- Flask REST API
+- Dockerized application
+- Health check endpoint
+- JSON API responses
+- Production-ready setup using Gunicorn
+- Ready for cloud deployment (Render, AWS, etc.)
+
+---
+
+## 📦 API Endpoints
+
+### GET /
+Returns basic API info
+
+{
+  "message": "Python Docker API is running",
+  "status": "success",
+  "routes": ["/health", "/tasks"]
+}
+
+---
+
+### GET /health
+Health check endpoint
+
+{
+  "status": "healthy",
+  "timestamp": "2026-04-30T19:42:44"
+}
+
+---
+
+### GET /tasks
+Returns a list of sample tasks
+
+{
+  "count": 2,
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Learn Docker basics",
+      "completed": true
+    },
+    {
+      "id": 2,
+      "title": "Deploy Python app with Docker",
+      "completed": false
+    }
+  ]
+}
+
+---
+
+## 🐳 Running with Docker
+
+### Build the image
+
+docker build -t python-docker-app .
+
+### Run the container
+
+docker run -p 5001:5001 python-docker-app
+
+### Open in browser
+
+http://localhost:5001
+
+---
+
+## 🛠 Tech Stack
+
+- Python
+- Flask
+- Gunicorn
+- Docker
+
+---
+
+## 🌐 Deployment
+
+This project is designed to be deployed using Docker on platforms like:
+
+- Render
+- AWS (ECS / Elastic Beanstalk)
+- Google Cloud Run
+- Fly.io
+
+---
+
+## 📌 What This Project Demonstrates
+
+- Containerizing a backend application with Docker
+- Running a Python API in a production-ready environment
+- Structuring a simple REST API
+- Preparing an app for cloud deployment
+
+---
+
+## 👤 Author
+
+Sergey Onoprichuk  
+https://github.com/OnoprichukSergey-FS
